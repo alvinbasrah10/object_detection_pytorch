@@ -1,0 +1,19 @@
+Results :
+
+1. Kalau pakai model yang datasetnya foto sendiri, ngebaca topi dan helm.
+2. Kalau pakai model yang datasetnya dari google, kadang ngebaca kepala ada topi nya.
+
+--------------------------------------------------------------------------------------------------------------------------
+Summaries :
+
+1. Data udah 240 untuk dataset google
+2. Data udah 250 untuk dataset sendiri
+3. File yolov3-tiny1.cfg nya ga perlu diganti2 pake yg dataset sendiri atau google sama aja.
+4. Folder TRAINED di direktori download buat darknetnya itu ada dataset google sama dataset bikinan sendiri
+
+--------------------------------------------------------------------------------------------------------------------------
+SSH Raspi Andalabs :
+
+IP: 172.16.10.200
+UN: root
+PW: andalabs

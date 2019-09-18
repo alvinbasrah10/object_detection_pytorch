@@ -71,13 +71,13 @@ def arg_parse():
     parser.add_argument("--nms_thresh", dest = "nms_thresh", help = "NMS Threshhold", default = 0.4)
     parser.add_argument("--cfg", dest = 'cfgfile', help = 
                         "Config file",
-                        default = "cfg/yolov3.cfg", type = str)
+                        default = "cfg/yolov3-tiny1.cfg", type = str)
     parser.add_argument("--weights", dest = 'weightsfile', help = 
                         "weightsfile",
-                        default = "yolov3.weights", type = str)
+                        default = "yolov3-tiny1_final.weights", type = str)
     parser.add_argument("--reso", dest = 'reso', help = 
                         "Input resolution of the network. Increase to increase accuracy. Decrease to increase speed",
-                        default = "416", type = str)
+                        default = "448", type = str)
     return parser.parse_args()
 
 
@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
     CUDA = torch.cuda.is_available()
 
-    num_classes = 80
+    num_classes = 2
 
     CUDA = torch.cuda.is_available()
     
@@ -163,7 +163,7 @@ if __name__ == '__main__':
                 output[i, [1,3]] = torch.clamp(output[i, [1,3]], 0.0, im_dim[i,0])
                 output[i, [2,4]] = torch.clamp(output[i, [2,4]], 0.0, im_dim[i,1])
             
-            classes = load_classes('data/coco.names')
+            classes = load_classes('data/obj.names')
             colors = pkl.load(open("pallete", "rb"))
             
             list(map(lambda x: write(x, orig_im), output))
