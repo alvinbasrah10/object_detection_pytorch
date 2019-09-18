@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # A PyTorch implementation of a YOLO v3 Object Detector
 
 [UPDATE] : This repo serves as a driver code for my research. I just graduated college, and am very busy looking for research internship / fellowship roles before eventually applying for a masters. I won't have the time to look into issues for the time being. Thank you.
@@ -91,3 +92,7 @@ python detect.py --scales 1,3
 ```
 
 
+=======
+# object_detection_pytorch
+Object detection using trained model yolov3 tiny by darknet
+>>>>>>> b825999a811ad4ca0333b463ba26df3fb4d0f5d4
